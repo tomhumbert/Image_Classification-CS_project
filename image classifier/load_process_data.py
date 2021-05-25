@@ -52,7 +52,7 @@ def stats(imgs, lbls):
     #df.plot()
     #plt.show()
     
-def main(folder):
+def get_full_ds(folder): 
     
     train_images = []
     train_labels = []
@@ -82,7 +82,7 @@ def main(folder):
     
     
 if __name__ == "__main__":
-    train_images, train_labels, test_images, test_labels = main("..\\cifar-10-python\\cifar-10-batches-py")
+    train_images, train_labels, test_images, test_labels = get_full_ds("..\\cifar-10-python\\cifar-10-batches-py")
     stats(train_images, train_labels)
     stats(test_images, test_labels)
     sel_lbl, sel_img = get_categories(train_images, train_labels, ['airplane', 'cat'])
